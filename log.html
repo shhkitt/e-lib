@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-lib</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/68ea6cb785.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <header>
+        <a id="logo-ref" href="index.html">e-lib</a>
+        <form> 
+            <input type="text" name="text" class="search" placeholder="поиск">
+        </form>
+        <nav>
+            <a href="lib.html">библиотека</a>
+            <a href="mybooks.html">мои книги</a>
+            <a href="authors.html">авторы</a>
+            <a href="log.html">профиль</a>
+        </nav>
+    </header>
+    
+    <section>
+        <div class="log">
+            <h1>Тысячи книг в одном месте</h1>
+            <form method="post">
+                <div class="txt_field">
+                    <label>имя пользователя</label>
+                    <input type="text" required>
+                </div>
+                <div class="txt_field">
+                    <label>пароль</label>
+                    <input type="password" required>
+                </div>
+                <div class="pass">забыли пароль?</div>
+                <input class="sub" type="submit" value="войти">
+                <div class="signup_link">
+                    нет аккаунта? <a href="#">зарегистрироваться</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
