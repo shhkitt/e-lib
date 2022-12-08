@@ -9,3 +9,15 @@ function myFunction2() {
 function myFunction3() {
   document.getElementById("myDropdown3").classList.toggle("show");
 }
+
+function slider() {
+var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 3){
+        counter = 1;
+      }
+    }, 10000);
+}
+slider();
