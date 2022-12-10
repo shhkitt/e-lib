@@ -34,6 +34,7 @@ body {
     color:rgba(36, 34, 30);
     background-image: url(source/8.jpg);
     /*background-image: url(source/5.jpg);*/
+	min-height: 100%;
 }
 input, button{font-family: 'TTAlientz Variable', serif;}
 header,
@@ -73,7 +74,7 @@ header #logo-ref{
     font-size: 20pt;
     text-align: center;
     padding: 0 1em;
-	transition: 0.3s;
+	transition: 0.5s;
 }
 #logo-ref:hover{
 	transform: scale(1.1);
@@ -150,7 +151,11 @@ section {
     margin-left: 10%;
 }
 
-
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
 
 #home h1{
     font-weight: normal;
@@ -206,7 +211,8 @@ h2, h3{
     border-radius: 8px;
     border: 1px solid rgba( 255, 255, 255, 0.2 );
     padding: 1em;
-	transition: 0.3s;
+	transition: 0.5s;
+	cursor: pointer;
 }
 
 #home .card:hover{
@@ -234,22 +240,26 @@ h2, h3{
 
 /*библиотека*/
 
+.lib{
+	min-height: 100%;
+}
 
-.lib a, .slider a{
+.lib a, .slider a, .subcard a{
     padding: 0.2em 2em;
     background: rgba(145,156,157, 0.5);
     color: #000;
     text-decoration: none;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: 0.5s;
 	cursor: pointer;
 }
 
-.lib a:hover, .slider a:hover{
+.lib a:hover, .slider a:hover, .subcard a:hover{
     background: rgba(145,156,157, 1);
 }
 
 .lib .card-holder{
+	min-height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -312,11 +322,13 @@ h2, h3{
 }
 
 .lib{
-    position: absolute;
+	position: relative;
     top: 10em;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
+	flex: 1 0 auto;
+	margin-bottom: 300px;
 }
 
 .lib-block {
@@ -338,6 +350,7 @@ h2, h3{
 .books { 
     grid-area: 2 / 1 / 3 / 2;
     padding: 1em;
+	min-height: 100%;
 }
 
 .filter { 
@@ -356,8 +369,14 @@ h2, h3{
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 8px;
     border: 1px solid rgba( 255, 255, 255, 0.2 );
-    transition: 0.3s;
+    transition: 0.5s;
+	display: flex;
+	justify-content: space-between;
 }
+.filter-box img{
+	transform: rotate(180deg);
+}
+
 
 .lib .filter-box:hover{
     background: rgba(255,255,255, 1);
@@ -373,7 +392,11 @@ h2, h3{
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 8px;
     border: 1px solid rgba( 255, 255, 255, 0.2 );
-    transition: 0.3s;
+    transition: 0.5s;
+}
+
+.reg{
+	display: none;
 }
 
 .log h1{
@@ -424,7 +447,7 @@ h2, h3{
     border: none;
     cursor: pointer;
     outline: none;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .sub:hover{
@@ -522,7 +545,7 @@ h2, h3{
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 8px;
     border: 1px solid rgba( 255, 255, 255, 0.2 );
-    transition: 0.3s;
+    transition: 0.5s;
     z-index: 1;
     display: none;
 }
@@ -671,6 +694,7 @@ border: none;
 }
 
 
+
 .container{
 	width: 70%;
 	margin:auto;
@@ -685,6 +709,8 @@ ul{
 .footer{
 	background-color: rgba(36, 34, 30);
     padding: 2em 0 4em;
+	z-index: 1;
+	flex: 0 0 auto;
 }
 .footer-col{
    width: 25%;
@@ -715,7 +741,7 @@ ul{
 	text-decoration: none;
 	color: rgba(145,156,157);
 	display: block;
-	transition: all 0.3s ease-out;
+	transition: all 0.5s ease-out;
 }
 .footer-col ul li a:hover{
 	color: #fff;
@@ -744,4 +770,150 @@ footer p{
 	color: rgba(145,156,157);
 	text-align: center;
 	margin-top: 2em;
+}
+
+
+.mylib{
+	display: flex;
+	flex-flow: wrap;
+}
+.mylib .myfilter{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+}
+.mylib .myfilter .myitems{
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+}
+.mylib .it{
+	cursor: pointer;
+	transition: 0.5s;
+}
+.mylib .it:hover{
+	color: rgba(145,156,157);
+}
+
+.mylib h1{
+	margin: 5em 2em 2em;
+	justify-self: flex-start;
+	font-weight: normal;
+}
+.mybooks{
+	border-top: 2px solid rgba(145,156,157, 0.8);
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.book{
+	text-align: center;
+	padding: 1em;
+	margin: 1em 2em;
+	background: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+	transition: 0.5s ease-in-out;
+}
+
+.book:hover{
+	transform: translateY(-0.5em);
+	background: rgba(255,255,255,0.8);
+}
+
+.book .text{
+	height: 250px;
+	width: 100%;
+	z-index: 2;
+	display: none;
+}
+
+.book .img-box-l{
+	height: 250px;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+
+}
+.book img{
+	height: 250px;
+	width: auto;
+}
+
+body{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.subcard .card{
+	min-width: 300px;
+	height: 600px;
+	text-align: center;
+	align-items: center;
+	margin: 1em;
+	padding: 2em;
+	background: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+	transition: 0.5s ease-in-out;
+	display: flex;
+	flex-flow: wrap column;
+	justify-content: space-between;
+}
+.subcard .card:nth-child(3){
+	background: rgba(145,156,157, 0.4);
+}
+
+.subcard .card:hover{
+	transform: translateY(-1em);
+	background: rgba(255,255,255,0.8);
+}
+
+.subcard .card h1{
+	font-weight: normal;
+}
+
+.subcard .card .items{
+	height: 40%;
+	text-align: left;
+}
+
+.items p{
+	margin-top: 1em;
+}
+
+.subcard .text{
+	display: flex;
+	flex-wrap: wrap;
+	width: 300px;
+	height: 600px;
+	padding: 1em;
+	align-content: flex-start;
+}
+.subcard img{
+	height: 80px;
+	width: 80px;
+}
+
+.subcard a{
+	width: 100%;
+}
+
+.items img{
+	width: 20px;
+	height: 20px;
+	align-self: center;
+	position: relative;
+	top: 5px;
+	margin-right: 1em;
 }

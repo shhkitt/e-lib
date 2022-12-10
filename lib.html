@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-lib</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="jquery.js"></script>  
-    <script src="https://kit.fontawesome.com/68ea6cb785.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
     <script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -20,11 +19,10 @@
         <nav>
             <a href="lib.html">библиотека</a>
             <a href="mybooks.html">мои книги</a>
-            <a href="authors.html">авторы</a>
-            <a href="log.html">профиль</a>
+            <a href="sub.html">подписка</a>
+            <a class="login" href="log.html">профиль</a>
         </nav>
     </header>
-
     <div class="lib">
         <div class="lib-block">
         <div class="head">
@@ -33,13 +31,13 @@
             <p style="color: rgba(145,156,157); font-size: 0.8em">123 456 книг</p>
         </div>
         <div class="filter">
-                <button onclick="myFunction1()" class="filter-box">Подписка</button>
+                <button onclick="myFunction1()" class="filter-box">Подписка<img src="source/up-arrow.png"></button>
                 <div id="myDropdown1" class="filter-content">
                     <a href="#">Бесплатно</a>
                     <a href="#">Стандарт</a>
                     <a href="#">Премиум</a>
                 </div>
-                <button onclick="myFunction2()" class="filter-box">Жанр</button>
+                <button onclick="myFunction2()" class="filter-box">Жанр<img src="source/up-arrow.png"></button>
                 <div id="myDropdown2" class="filter-content">
                     <a href="#">бизнес-литература</a>
                     <a href="#">романтика</a>
@@ -49,7 +47,7 @@
                     <a href="#">для детей</a>
                     <a href="#">научная литература</a>
                 </div>
-            <button onclick="myFunction3()" class="filter-box">Язык</button>
+            <button onclick="myFunction3()" class="filter-box">Язык<img src="source/up-arrow.png"></button>
                 <div id="myDropdown3" class="filter-content">
                     <a href="#">русский</a>
                     <a href="#">английский</a>
@@ -208,7 +206,53 @@
         
     </div>
     </div>
-    
     </div>
+	
+	<footer class="footer">
+		
+  	 <div class="container">
+		 
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>e-lib</h4>
+  	 			<ul>
+  	 				<li><a href="#">о нас</a></li>
+					<li><a href="#">правовая информация</a></li>
+  	 				<li><a href="#">правообладателям</a></li>
+  	 				<li><a href="#">помощь</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>подписка</h4>
+  	 			<ul>
+  	 				<li><a href="#">купить подписку</a></li>
+  	 				<li><a href="#">как оплатить</a></li>
+  	 				<li><a href="#">подарить подписку</a></li>
+  	 				<li><a href="#">бесплатный каталог</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>библиотека</h4>
+  	 			<ul>
+  	 				<li><a href="#">все книги</a></li>
+  	 				<li><a href="#">авторы</a></li>
+  	 				<li><a href="#">избранное</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>следите за новостями</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+		 <p>Shashkova Ekaterina 2022© Student MIREA. ALL RIGHTS RESERVED</p>
+  	 </div>
+  </footer>
+	
 </body>
 </html>

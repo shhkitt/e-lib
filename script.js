@@ -10,6 +10,11 @@ function myFunction3() {
   document.getElementById("myDropdown3").classList.toggle("show");
 }
 
+function logToReg() {
+	document.getElementById("reg").classList.toggle("show");
+	document.getElementById("log").classList.toggle("nshow");
+}
+
 function slider() {
 var counter = 1;
     setInterval(function(){
