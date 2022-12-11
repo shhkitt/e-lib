@@ -26,3 +26,13 @@ var counter = 1;
     }, 10000);
 }
 slider();
+
+
+function menu() {
+  document.getElementById("nav").classList.toggle("active"); 
+  document.getElementById("cl").classList.toggle("showcl"); 
+}
+
+function search() {
+  document.getElementById("sform").classList.toggle("showcl");
+}

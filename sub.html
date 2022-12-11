@@ -12,11 +12,14 @@
 
 <body>
     <header>
+		<button onclick="menu()" class="nbtn"><img class="nimg menu" src="source/menu.png"></button>
         <a id="logo-ref" href="index.html">e-lib</a>
-        <form> 
-            <input type="text" name="text" class="search" placeholder="поиск">
+		<button onclick="search()" class="nbtn"><img class="nimg" src="source/loupe.png"></button>
+		<button onclick="menu()" id="cl" class="cl"><img class="nimg" src="source/close.png"></button>
+        <form > 
+            <input type="text" name="text" class="search" id="sform" placeholder="поиск">
         </form>
-        <nav>
+        <nav id="nav">
             <a href="lib.html">библиотека</a>
             <a href="mybooks.html">мои книги</a>
             <a href="sub.html">подписка</a>
@@ -32,7 +35,7 @@
 		
 		<div class="card">
 			<h1>Бесплатно</h1>
-			<img src="source/open-book.png">
+			<img class="img" src="source/open-book.png">
 			<div class="items">
 				<h2>0 р. / месяц</h2>
 			<p>1000 книг</p>
@@ -44,7 +47,7 @@
 		</div>
 		<div class="card">
 			<h1>Стандарт</h1>
-			<img src="source/book.png">
+			<img class="img" src="source/book.png">
 			<div class="items">
 				<h2>100 р. / месяц</h2>
 			<p>60000 книг</p>
@@ -56,7 +59,7 @@
 		</div>
 		<div class="card">
 			<h1>Премиум</h1>
-			<img src="source/library.png">
+			<img class="img" src="source/library.png">
 			<div class="items">
 				<h2>300 р. / месяц</h2>
 				
