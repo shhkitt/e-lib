@@ -188,10 +188,15 @@ h2, h3{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     border: 1px solid rgba( 255, 255, 255, 0.2 );
+	transition: 0.5s;
 }
 
 .img-box img{
     width: 100%;
+}
+
+#home .img-box:hover{
+	background: rgba(255,255,255, 1);
 }
 
 #home .cards{
@@ -217,7 +222,7 @@ h2, h3{
 
 #home .card:hover{
 	transform: translateY(-0.5em);
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255, 1);
 }
 
 #home .card .img-box-l{
@@ -237,6 +242,54 @@ h2, h3{
     font-size: 2em;
     color: rgba(36, 34, 30);
 }
+
+#home .card::before{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	background: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+	opacity: 0;
+	transition: 0.3s;
+	
+}
+#home .card:hover:before{
+	opacity: 1;
+}
+
+#home .card .text{
+	height: 250px;
+	width: 100%;
+	z-index: 2;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	opacity: 0;
+	transition: 0.5s;
+	text-align: center;
+}
+#home .card .text a{
+	text-decoration: none;
+	color: rgba(36, 34, 30);
+	transition: 0.3s;
+}
+#home .card .text a:hover {
+	color:  #fff; 
+}
+#home .card:hover .text{
+	display: block;
+	opacity: 1;
+}
+
 
 /*библиотека*/
 
@@ -285,6 +338,7 @@ h2, h3{
 
 .lib .card:hover{
     background: rgba(255,255,255, 1);
+	transform: translateY(-0.5em);
 }
 
 .lib .img-box{
@@ -802,12 +856,13 @@ footer p{
 	justify-self: flex-start;
 }
 .mybooks{
-	border-top: 2px solid rgba(145,156,157, 0.8);
+	margin-top: 1em;
 	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-bottom: 10em;
+	margin-bottom: 5em;
 }
 
 .book{
@@ -825,7 +880,29 @@ footer p{
 
 .book:hover{
 	transform: translateY(-0.5em);
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,1);
+}
+
+.book::before{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	background: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+	opacity: 0;
+	transition: 0.3s;
+	
+}
+.book:hover:before{
+	opacity: 1;
 }
 
 .book .text{
@@ -833,6 +910,23 @@ footer p{
 	width: 100%;
 	z-index: 2;
 	display: none;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	opacity: 0;
+	transition: 0.5s;
+}
+.book .text a{
+	text-decoration: none;
+	color: rgba(36, 34, 30);
+	transition: 0.3s;
+}
+.book .text a:hover {
+	color:  #fff; 
+}
+.book:hover .text{
+	display: block;
+	opacity: 1;
 }
 
 .book .img-box-l{
@@ -877,7 +971,7 @@ body{
 
 .subcard .card:hover{
 	transform: translateY(-1em);
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,1);
 }
 
 .subcard .card h1{
@@ -929,7 +1023,6 @@ body{
 	}
 
 
-
 section{
     padding-top: 10em;
 }
@@ -957,6 +1050,39 @@ section{
 
 .mylib{
     height: 100%;
+}
+
+.read{
+	margin-top: 1em;
+	width: 100%;
+	padding: 2em;
+	background: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+}
+.music{
+	width: 100%;
+	height: auto;
+	z-index: 2;
+	display: flex;
+	margin-bottom: 1em;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+.music div{
+	text-align: center;
+	width: 300px;
+	margin: 0 1em;
+}
+
+#reads{
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 @media(max-width: 1640px){
@@ -1140,6 +1266,22 @@ section{
 	.books{
 		margin-top: 0;
 	}
+	#home .cards{
+		display: flex;
+		flex-flow: wrap;
+	}
+	#home .card:nth-child(1){
+		display: block;
+	}
+	#home .card:nth-child(2){
+		display: block;
+	}
+	#home .card{
+		min-height: 350px;
+		padding: 1em;
+		margin: 1em;
+	}
+	
 }
 
 @media(max-width: 767px){
@@ -1197,13 +1339,15 @@ section{
 		display: block;
 	}
 	
-	#home .card {
-		height: 160px;
-		padding: 0.5em;
-	}
+	
+	
 	#home .img-box, .slider{
 		height: 550px;
 		font-size: 100%;
+	}
+	
+	.read{
+		font-size: 80%;
 	}
 }
 @media(max-width: 574px){
@@ -1211,21 +1355,7 @@ section{
     width: 100%;
 }
 	
-	#home .cards{
-		display: flex;
-		flex-flow: wrap;
-	}
-	#home .card:nth-child(1){
-		display: block;
-	}
-	#home .card:nth-child(2){
-		display: block;
-	}
-	#home .card{
-		height: 250px;
-		padding: 1em;
-		margin: 1em;
-	}
+	
 	#home .img-box, .slider{
 		height: 550px;
 		font-size: 95%;
@@ -1272,9 +1402,12 @@ section{
         height: auto;
         justify-content: center;
     }
-    .lib .books .card a, .books .card .dis{
+    .books .card .dis{
         font-size: 70%;
     }
+	.lib .books .card a{
+		font-size: 90%;
+	}
         .lib .books .card img,     .lib .books .card .img-box{
             height: 150px;
     }

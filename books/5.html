@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-lib</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../script.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="shortcut icon" href="../source/open-book.png" type="image">
+</head>
+
+<body>
+     <header>
+		<button onclick="menu()" class="nbtn"><img class="nimg menu" src="../source/menu.png"></button>
+        <a id="logo-ref" href="../index.html">e-lib</a>
+		<button onclick="search()" class="nbtn"><img class="nimg" src="../source/loupe.png"></button>
+		<button onclick="menu()" id="cl" class="cl"><img class="nimg" src="../source/close.png"></button>
+        <form > 
+            <input type="text" name="text" class="search" id="sform" placeholder="поиск">
+        </form>
+        <nav id="nav">
+            <a href="../lib.html">библиотека</a>
+            <a href="../mybooks.html">мои книги</a>
+            <a href="../sub.html">подписка</a>
+            <a class="login" href="../log.html">профиль</a>
+        </nav>
+    </header>
+
+	<section id="reads">
+		<div class="music">
+			<div>
+			<p>Библиотека</p>
+			<audio controls loop><source src="../source/library.mp3"></audio>
+			</div>
+			<div>
+			<p>Дождь</p>
+			<audio controls loop><source src="../source/rain.mp3"></audio>
+			</div>
+			<div>
+			<p>Lo-fi</p>
+			<audio controls loop><source src="../source/lofi.mp3"></audio>
+			</div>
+			
+		</div>
+		<div class="read">
+			<h1></h1>
+			<h3>Бесплатный отрывок</h3><br><br>
+			<p>
+				
+			</p>
+		</div>
+	</section>   
+
+	<footer class="footer">
+		
+  	 <div class="container">
+		 
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>e-lib</h4>
+  	 			<ul>
+  	 				<li><a href="#">о нас</a></li>
+					<li><a href="#">правовая информация</a></li>
+  	 				<li><a href="#">правообладателям</a></li>
+  	 				<li><a href="#">помощь</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>подписка</h4>
+  	 			<ul>
+  	 				<li><a href="../sub.html">купить подписку</a></li>
+  	 				<li><a href="../sub.html">как оплатить</a></li>
+  	 				<li><a href="../sub.html">подарить подписку</a></li>
+  	 				<li><a href="../lib.html">бесплатный каталог</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>библиотека</h4>
+  	 			<ul>
+  	 				<li><a href="../lib.html">все книги</a></li>
+  	 				<li><a href="#">авторы</a></li>
+  	 				<li><a href="../mybooks.html">избранное</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>следите за новостями</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+		 <p>Shashkova Ekaterina 2022© Student MIREA. ALL RIGHTS RESERVED</p>
+  	 </div>
+  </footer>
+</body>
+</html>
