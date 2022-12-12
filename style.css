@@ -798,9 +798,8 @@ footer p{
 }
 
 .mylib h1{
-	margin: 5em 2em 2em;
+	margin: 0 2em 2em;
 	justify-self: flex-start;
-	font-weight: normal;
 }
 .mybooks{
 	border-top: 2px solid rgba(145,156,157, 0.8);
@@ -931,6 +930,10 @@ body{
 
 
 
+section{
+    padding-top: 10em;
+}
+
 .nbtn{
 	border: none;
 	outline: none;
@@ -945,6 +948,11 @@ body{
 	background: transparent;
 	display: none;
 	cursor: pointer;
+}
+
+.lib{
+    margin-right: 0;
+    padding-right: 0;
 }
 
 @media(max-width: 1640px){
@@ -1011,6 +1019,10 @@ body{
 	#home .img-box img{
 		height: 200px;
 	}
+    
+    .mybooks .book:nth-child(2){
+        display: block;
+    }
 }
 
 @media(max-width: 991px){
@@ -1078,9 +1090,22 @@ body{
 	.mybooks{
 		justify-content: center;
 	}
-	.mybooks .book img{
-		height: 350px;
+	.mybooks .book img, .img-box-l{
+        width: 210px;
+        min-height: 300px;
 	}
+    .mylib .myfilter{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mylib .myitems{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .lib{
+        margin-right: 0;
+    }
 	.lib-block{
 		width: 100%;
 		grid-template-columns: 80%;
@@ -1097,12 +1122,27 @@ body{
 		display: flex;
 		height: 100px;
 	}
+    .filter-content{
+        position: absolute;
+        width: 25%;
+        top: 13em;
+    }
+    .filter-content:nth-child(4){
+        margin-left: 25%;
+    }
+        .filter-content:nth-child(6){
+        margin-left: 50%;
+    }
 	.books{
 		margin-top: 0;
 	}
 }
 
 @media(max-width: 767px){
+    
+    .nbtn{
+		display: block;
+	}
 
 	header .search{
 		display: none;
@@ -1141,9 +1181,7 @@ body{
 		margin: 0;
 		width: 50%;
 	}
-	.nbtn{
-		display: block;
-	}
+	
 	.cl{
 		display: none;
 		z-index: 10;
@@ -1202,6 +1240,47 @@ body{
 	.navigation-auto, .navigation-manual{
 		margin-left: 35%;
 	}
+    
+    .filter{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .filter-box{
+        width: 100%;
+    }
+    .filter-content{
+        width: 100%;
+    }
+    .filter-content{
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+    .filter-content:nth-child(4){
+        margin-left: 0;
+    }
+        .filter-content:nth-child(6){
+        margin-left: 0;
+    }
+    .lib .books .card{
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+    .lib .books .card a, .books .card .dis{
+        font-size: 70%;
+    }
+        .lib .books .card img,     .lib .books .card .img-box{
+            height: 150px;
+    }
+    .books .card .text{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 1em;
+    }
 }
 @media(max-width: 425px){
 	.subcard .card{
@@ -1232,4 +1311,5 @@ body{
 	.reg, .log{
 		font-size: 90%;
 	}
+    
 }
