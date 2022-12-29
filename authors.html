@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-lib</title>
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="shortcut icon" href="./source/open-book.png" type="image">
 </head>
 
 <body>
-    <header>
+     <header>
 		<button onclick="menu()" class="nbtn"><img class="nimg menu" src="source/menu.png"></button>
         <a id="logo-ref" href="index.html">e-lib</a>
 		<button onclick="search()" class="nbtn"><img class="nimg" src="source/loupe.png"></button>
@@ -27,52 +26,12 @@
             <a class="login" href="log.html">профиль</a>
         </nav>
     </header>
-	
-	<section class="subcard">
-		<div class="text">
-			<h1>Выберите подписку</h1>
-			<p>На сегодня в каталоге: 123000 книг,<br> 12000 аудиокниг,<br> подкастов и лекций.</p>
+
+	<section>
+		<div class="author-card">
+			<div></div>
 		</div>
-		
-		<div class="card">
-			<h1>Бесплатно</h1>
-			<img class="img" src="source/open-book.png">
-			<div class="items">
-				<h2>0 р. / месяц</h2>
-			<p>1000 книг</p>
-			<p><img src="source/check.png">аудиокниги</p>
-			<p><img src="source/close.png">подкасты</p>
-			<p><img src="source/close.png">рекомендации</p>
-			</div>
-			<a href="#">смотреть книги</a>
-		</div>
-		<div class="card">
-			<h1>Стандарт</h1>
-			<img class="img" src="source/book.png">
-			<div class="items">
-				<h2>100 р. / месяц</h2>
-			<p>60000 книг</p>
-			<p><img src="source/check.png">аудиокниги</p>
-			<p><img src="source/check.png">подкасты</p>
-			<p><img src="source/close.png">рекомендации</p>
-			</div>
-			<a href="#">оформить подписку</a>
-		</div>
-		<div class="card">
-			<h1>Премиум</h1>
-			<img class="img" src="source/library.png">
-			<div class="items">
-				<h2>300 р. / месяц</h2>
-				
-			<p>123000 книг</p>
-			<p><img src="source/check.png">аудиокниги</p>
-			<p><img src="source/check.png">подкасты</p>
-			<p><img src="source/check.png">рекомендации</p>
-				<p><img src="source/check.png">ранний доступ*</p>
-			</div>
-			<a href="#">оформить подписку</a>
-		</div>
-	</section>
+	</section>   
 
 	<footer class="footer">
 		
@@ -92,18 +51,18 @@
   	 		<div class="footer-col">
   	 			<h4>подписка</h4>
   	 			<ul>
-  	 				<li><a href="#">купить подписку</a></li>
-  	 				<li><a href="#">как оплатить</a></li>
-  	 				<li><a href="#">подарить подписку</a></li>
-  	 				<li><a href="#">бесплатный каталог</a></li>
+  	 				<li><a href="sub.html">купить подписку</a></li>
+  	 				<li><a href="sub.html">как оплатить</a></li>
+  	 				<li><a href="sub.html">подарить подписку</a></li>
+  	 				<li><a href="lib.html">бесплатный каталог</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
   	 			<h4>библиотека</h4>
   	 			<ul>
-  	 				<li><a href="#">все книги</a></li>
+  	 				<li><a href="lib.html">все книги</a></li>
   	 				<li><a href="#">авторы</a></li>
-  	 				<li><a href="#">избранное</a></li>
+  	 				<li><a href="mybooks.html">избранное</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
@@ -118,4 +77,5 @@
 		 <p>Shashkova Ekaterina 2022© Student MIREA. ALL RIGHTS RESERVED</p>
   	 </div>
   </footer>
-	</body>
+</body>
+</html>
